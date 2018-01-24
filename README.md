@@ -2,7 +2,7 @@
 
 The application presents Astronomy Picture of the Day - NASA. Sometimes it is a picture and sometimes a movie.
  
-The project used the official [NASA API] (https://api.nasa.gov) and React/Redux technologies.
+The project used the official [NASA API](https://api.nasa.gov) and React/Redux technologies.
 When building the application, it was used [Create React App](https://github.com/facebookincubator/create-react-app).
 
 ## Run app: 
