@@ -1,13 +1,13 @@
-import {FETCH_APoD, FETCH_APoDByDate} from '../actions/actions';
+import {FETCH_APOD, FETCH_APODBYDATE} from '../actions/actions';
 
 export default function (state = {}, action) {
     switch (action.type) {
-        case FETCH_APoD:
+        case FETCH_APOD:
             return {
                 ...state,
                 data: action.payload.data
             };
-        case FETCH_APoDByDate: {
+        case FETCH_APODBYDATE: {
             return {
                 ...state,
                 date: action.payload.data

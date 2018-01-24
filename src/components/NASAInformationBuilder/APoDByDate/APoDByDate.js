@@ -40,8 +40,6 @@ class APoDByDate extends Component {
     }
 }
 
-function mapStateToProps(state) {
-    return {nasa: state.nasa}
-}
+const mapStateToProps = (state) => ({nasa: state.nasa});
 
 export default connect(mapStateToProps, actions)(APoDByDate);
