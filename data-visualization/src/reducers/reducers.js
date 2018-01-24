@@ -1,4 +1,4 @@
-import {FETCH_APoD} from '../actions/actions';
+import {FETCH_APoD, FETCH_APoDByDate} from '../actions/actions';
 
 export default function (state = {}, action) {
     switch (action.type) {
@@ -7,6 +7,12 @@ export default function (state = {}, action) {
                 ...state,
                 data: action.payload.data
             };
+        case FETCH_APoDByDate: {
+            return {
+                ...state,
+                date: action.payload.data
+            }
+        }
         default:
             return state;
     }

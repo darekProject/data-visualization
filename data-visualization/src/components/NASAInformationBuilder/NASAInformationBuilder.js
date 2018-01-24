@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import {Link} from 'react-router-dom';
 import {fetchAPoD} from "../../actions/actions";
 
 import './NASAInformationBuilder.css';
@@ -21,6 +22,11 @@ class NASAInformationBuilder extends Component {
         return (
             <div className="wrapper">
                 {this.renderAPoD()}
+                <div>
+                    <Link className="btn-link" to='/by-date'>
+                        Display APoD by date
+                    </Link>
+                </div>
             </div>
         )
     }

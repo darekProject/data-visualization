@@ -32,7 +32,8 @@ class APoD extends Component {
                 <div className="video-APoD">
                     <iframe src={this.props.url} title={this.props.title}/>
                 </div>
-                <button className="button-toggle" onClick={this.toggleSwitchExplanationHandler}>Show Explanation</button>
+                <button className="button-toggle" onClick={this.toggleSwitchExplanationHandler}>Show/Hide Explanation
+                </button>
                 {description}
             </div>
         );
