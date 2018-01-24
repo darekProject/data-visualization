@@ -23,7 +23,7 @@ class App extends Component {
                         <Switch>
                             <Route path='/by-date' component={APoPByDate}/>
                             <Route path='/' component={NASAInformationBuilder}/>
-                        </Switch>`
+                        </Switch>
                     </div>
                 </BrowserRouter>
             </Provider>
