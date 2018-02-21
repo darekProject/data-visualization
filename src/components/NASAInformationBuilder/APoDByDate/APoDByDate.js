@@ -18,7 +18,7 @@ class APoDByDate extends Component {
     };
 
     renderAPoDByDate = () => {
-        if (this.props.nasa.date !== undefined) {
+        if (this.props.nasa.date) {
             const data = this.props.nasa.date;
             return <APoD title={data['title']} url={data['url']} date={data['date']} explanation={data['explanation']}/>
         }

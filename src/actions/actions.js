@@ -12,7 +12,7 @@ export const fetchAPoD = () => async dispatch => {
     dispatch({type: FETCH_APOD, payload: request});
 };
 
-export const fetchAPoDByDate= (date) => async dispatch => {
+export const fetchAPoDByDate = (date) => async dispatch => {
     const request = await axios.get(`${URL}?date=${date}&${API_KEY}`);
 
     dispatch({type: FETCH_APODBYDATE, payload: request});
