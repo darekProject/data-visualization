@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './APoD.css';
+import APoDDescription from './APoDDescription/APoDDescription';
 
 class APoD extends Component {
     state = {
@@ -7,22 +8,11 @@ class APoD extends Component {
     };
 
     toggleSwitchExplanationHandler = () => {
-        const dosesShow = this.state.showExplanation;
-        this.setState({showExplanation: !dosesShow});
+        const doesShow = this.state.showExplanation;
+        this.setState({showExplanation: !doesShow});
     };
 
     render() {
-        let description = null;
-
-        if (this.state.showExplanation) {
-            description = (
-                <div className="explanation">
-                    <span>Date: {this.props.date}</span>
-                    <p>{this.props.explanation}</p>
-                </div>
-            );
-        }
-
         return (
             <div className="box-APoD">
                 <h1>Astronomy Picture of the Day</h1>
@@ -34,7 +24,7 @@ class APoD extends Component {
                 </div>
                 <button className="button-toggle" onClick={this.toggleSwitchExplanationHandler}>Show/Hide Explanation
                 </button>
-                {description}
+                {this.state.showExplanation ? <APoDDescription date={this.props.date} exp={this.props.explanation}/> : null}
             </div>
         );
     }
